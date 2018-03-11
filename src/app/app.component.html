@@ -1,34 +1,52 @@
-<div class="wrapper" id="product-display">
-  <header class="prod_header">
-    <h1 class="prod_name">
-      Name: {{ data.name }}!
-    </h1>
-  </header>
-<div class="product_wrapper">
-  <div class="prod_box prod_img_box">
-    <img class="prod_img" width="300" alt="Hat" [src]="data.image">
-  </div> 
+<div class="top_nav_bar"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <section>
+          <div class="logo">
+            <img class="img-responsive" src="https://www.bluebridgeone.com/c.309120/shop/img/header-bluebridge-one-logo.png" />
+          </div>
 
-  <div class="prod_box prod_description_box">
-  <section class="prod_box prod_description">
-    <h2>Description: </h2>
-    <p>{{data.description}}</p>
-  </section>
-  
-  <section class="prod_box price_prod_box">
-      <h3>Price:
-      <span>{{data.price.amount}}</span>
-      <span>{{data.price.currency}}</span>
-      </h3>
-    <div class="product_properties">
-      <ul>
-        <li *ngFor="let prop of data.properties">
-          <h4>{{prop.name}}:{{prop.value}}</h4>
-        </li>
-      </ul>
+          <header class="prod_header">
+            <h1 class="prod_name">
+              Name: {{ data.name }}!
+            </h1>
+          </header>
+        </section>
+        <div class="wrapper">
+          <section>
+            <div class="product_wrapper">
+              <div class="prod_box prod_img_box">
+                <img class="prod_img" width="300" alt="Hat" [src]="data.image">
+              </div> 
+
+              <div class="prod_box prod_description_box">
+
+                <article class="prod_box prod_description">
+                  <h2 class="description">Description: </h2>
+                  <p class="data_description">{{data.description}}</p>
+                </article>
+
+                <article class="prod_box price_prod_box">
+                  <h3>Price:
+                  <span>{{data.price.amount}}</span>
+                  <span>{{data.price.currency}}</span>
+                  </h3>
+                  <div class="product_properties">
+                    <ul>
+                      <li *ngFor="let prop of data.properties">
+                        <h4>{{prop.name}}:{{prop.value}}</h4>
+                      </li>
+                    </ul>
+                  </div>
+                  <h3 class="brand">Brand {{data.brand}}</h3>
+                  <h3 class="sku">SKU: {{data.sku}}</h3> 
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
-    <h3 class="brand">Brand {{data.brand}}</h3>
-    <h3 class="sku">SKU: {{data.sku}}</h3> 
-  </section>
   </div>
-</div>
+<!-- closed -->
