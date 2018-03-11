@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+*  Entry Point for http://bradfrost.com/blog/post/atomic-web-design/
+*/
+
+/* .......... lib ........... */
+
+@import "app/scss/_lib/mixins";
+@import "app/scss/_lib/variables";
+
+/* .......... atoms ........... */
+
+@import "app/scss/atoms/typography";
+
+/* .......... organisms ........... */
+
+//@import "app/scss/organisms/...";
+
+/* .......... molecules ........... */
+
+//@import "app/scss/molecules/...";
+
+/* .......... templates ........... */
+
+@import "app/scss/templates/header";
+
+/* .......... pages ........... */
+
+@import "app/scss/pages/page";
+
+/* .......... shame ........... */
+
+@import "app/scss/shame";

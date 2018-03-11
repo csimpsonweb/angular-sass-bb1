@@ -1,0 +1,28 @@
+/*
+*
+* Emulate Bootstrap Breakpoints
+*
+*/
+@mixin breakpoint($point) {
+  
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query since this is the default in Bootstrap
+
+  $bp-sm: "(min-width: 576px)";  // Mobile-Landscape
+  $bp-md: "(min-width: 768px)";  // Tablet
+  $bp-lg: "(min-width: 992px)";  // Desktop
+  $bp-xl: "(min-width: 1200px)"; // Fullscreen
+
+  @if $point == lg {
+    @media #{$bp-lg} { @content; }
+  }
+  @else if $point == md {
+    @media #{$bp-md} { @content; }
+  }
+  @else if $point == sm {
+    @media #{$bp-sm}  { @content; }
+  }
+  @else if $point == xl {
+    @media #{$bp-xl}  { @content; }
+  }
+}

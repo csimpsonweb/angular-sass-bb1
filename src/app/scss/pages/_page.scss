@@ -1,0 +1,32 @@
+.prod_name {
+	text-align:center;
+	padding:$gutter-sm;
+}
+.prod_box {
+	width:100%;
+	float:left;
+	margin-top:$gutter;
+
+	@include breakpoint(lg) {
+		width:50%;
+	}
+}
+.prod_img {
+	display: block;
+    margin:auto;
+    padding:$gutter;
+}
+.prod_description {
+	padding-left:$gutter-sm;
+	width:98%;
+	@include breakpoint(lg) {
+		padding-left:0;
+	}
+}
+.price_prod_box {
+	padding-left:$gutter-sm;
+	width:100%;
+	@include breakpoint(lg) {
+		padding-left:0;
+	}
+}
